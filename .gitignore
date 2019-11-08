@@ -1,0 +1,4 @@
+/.cache/
+/.bash_history
+/wp-config-local.php
+/wp-content/themes/karmydsp/gulpfile.js

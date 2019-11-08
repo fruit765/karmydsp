@@ -1,0 +1,48 @@
+
+.wrapper {
+
+    &.policy-page {
+
+        .main-block {
+
+            .main-block-wrapper {
+
+                padding-top: 15px;
+                padding-bottom: 15px;
+
+                .policy-block {
+
+                    h1 {
+        
+                        margin-bottom: 20px;
+                    }
+        
+                    & > ol {
+        
+                        margin: 0;
+        
+                        & > li {
+        
+                            margin-bottom: 10px;
+        
+                            &::marker {
+        
+                                font-weight: bold;
+                            }
+        
+                            &:last-child {
+        
+                                margin-bottom: 0;
+                            }
+        
+                            strong {
+        
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
