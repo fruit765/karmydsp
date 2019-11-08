@@ -56,7 +56,6 @@
             wp_enqueue_script('inside-page', get_template_directory_uri().'/js/inside-page.js', array('jquery'), false, true);
             wp_enqueue_script('sidebar', get_template_directory_uri().'/js/sidebar.js', array('jquery'), false, true);
             wp_enqueue_script('filter', get_template_directory_uri().'/js/filter.js', array('jquery'), false, true);
-            wp_enqueue_script('correct-last-element', get_template_directory_uri().'/js/correct-last-element.js', array('jquery'), false, true);
         }
 
         if (is_single()) {
