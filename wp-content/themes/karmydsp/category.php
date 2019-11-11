@@ -1,8 +1,6 @@
 
 <?php get_header(); ?>
 
-<?php $count_posts_on_page = 5; ?>
-
 <div class="wrapper inside-page catalog-page">
 
     <div class="header-container">
@@ -52,11 +50,11 @@
                     
                     <span class="title">Товаров на странице: </span>
 
-                    <span class="count-item active"><?php echo $count_posts_on_page; ?></span>
+                    <span class="count-item">5</span>
 
                     <span class="count-item">10</span>
 
-                    <span class="count-item">все</span>
+                    <span class="count-item active">все</span>
                 </div>
             </div>
         </div>
@@ -80,9 +78,9 @@
 
                         $num_post = 0;
 
-                        $right = $num_page * $count_posts_on_page;
+                        $right = $num_page * $count_posts;
 
-                        $left = $right - $count_posts_on_page + 1;
+                        $left = $right - $count_posts + 1;
                     ?>
                     
                     <?php while ($loop->have_posts()) { $loop->the_post(); ?>
@@ -152,9 +150,9 @@
 
                 <?php
                 
-                    $count_pages = floor($count_posts / $count_posts_on_page);
+                    $count_pages = floor($count_posts / $count_posts);
 
-                    if ($count_posts % $count_posts_on_page !== 0) {
+                    if ($count_posts % $count_posts !== 0) {
 
                         $count_pages++;
                     }
