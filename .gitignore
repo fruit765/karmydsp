@@ -1,4 +1,8 @@
-/.cache/
-/.bash_history
+/.*
+!/.gitignore
 /wp-config-local.php
+/wp-content/themes/karmydsp/css/style.css
 /wp-content/themes/karmydsp/gulpfile.js
+/wp-content/themes/karmydsp/node_modules/
+/wp-content/themes/karmydsp/package-lock.json
+/wp-content/themes/karmydsp/package.json
