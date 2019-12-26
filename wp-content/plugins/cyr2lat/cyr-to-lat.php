@@ -8,9 +8,9 @@
  * Author: Sergey Biryukov, Mikhail Kobzarev, Igor Gergel
  * Author URI: https://profiles.wordpress.org/sergeybiryukov/
  * Requires at least: 5.1
- * Tested up to: 5.2
- * Version: 4.2.3
- * Stable tag: 4.2.3
+ * Tested up to: 5.3
+ * Version: 4.3
+ * Stable tag: 4.3
  *
  * Text Domain: cyr2lat
  * Domain Path: /languages/
@@ -18,6 +18,8 @@
  * @package cyr-to-lat
  * @author  Sergey Biryukov, Mikhail Kobzarev, Igor Gergel
  */
+
+namespace Cyr_To_Lat;
 
 // @codeCoverageIgnoreStart
 if ( ! defined( 'ABSPATH' ) ) {
@@ -28,7 +30,7 @@ if ( ! defined( 'CYR_TO_LAT_VERSION' ) ) {
 	/**
 	 * Plugin version.
 	 */
-	define( 'CYR_TO_LAT_VERSION', '4.2.3' );
+	define( 'CYR_TO_LAT_VERSION', '4.3' );
 }
 
 if ( ! defined( 'CYR_TO_LAT_PATH' ) ) {
@@ -86,21 +88,21 @@ if ( ! defined( 'CYR_TO_LAT_MINIMUM_PHP_REQUIRED_VERSION' ) ) {
  */
 
 static $requirements;
-static $plugin;
+static $cyr_to_lat_plugin;
 
 if ( ! isset( $requirements ) ) {
-	require_once CYR_TO_LAT_PATH . '/includes/class-cyr-to-lat-requirements.php'; // We cannot use composer autoloader here.
-	$requirements = new Cyr_To_Lat_Requirements();
+	require_once CYR_TO_LAT_PATH . '/classes/class-requirements.php';
+	$requirements = new Requirements();
 }
 
 if ( ! $requirements->are_requirements_met() ) {
-	$plugin = false;
+	$cyr_to_lat_plugin = false;
 	return;
 }
 
-if ( ! isset( $plugin ) ) {
+if ( ! isset( $cyr_to_lat_plugin ) ) {
 	require_once CYR_TO_LAT_PATH . '/vendor/autoload.php';
 
-	$plugin = new Cyr_To_Lat_Main();
+	$cyr_to_lat_plugin = new Main();
 }
 
