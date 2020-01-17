@@ -90,7 +90,7 @@
                         
                         <div class="rules">
                             
-                            <div class="text">Все права защищены. 2019</div>
+                            <div class="text">Все права защищены. <?php echo date("Y"); ?></div>
                         </div>
 
                         <div class="conf"><a href="/policy/" class="text">Политика конфиденциальности</a></div>
